@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到 melonTMD 的个人中心</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/159959432?v=4">
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img style="float: left; height: 150px;" src="https://avatars.githubusercontent.com/u/159959432?v=4">
+
+        <div class="a_div">
+            <button class="fa" onclick="openLink('index.html')">主页</button>
+            <button class="a" onclick="openLink('News.html')" onmouseover="toggle_hide_or_block('news')"
+                onmouseout="toggle_hide_or_block('news')">新闻</button>
+            <button class="a" onclick="openLink('Blogs.html')" onmouseover="toggle_hide_or_block('blog')"
+                onmouseout="toggle_hide_or_block('blog')">博客</button>
+            <button class="a" onclick="openLink('Articles.html')" onmouseover="toggle_hide_or_block('article')"
+                onmouseout="toggle_hide_or_block('article')">文章</button>
+
+            <button class="tittle">主页</button>
+        </div>
+
+        <div class="list_a_div" id="news">
+            <img class="tittle" src="img/News.png">
+        </div>
+
+        <div class="list_a_div" id="blog">
+            <img class="tittle" src="img/Blogs.png">
+        </div>
+
+        <div class="list_a_div" id="article">
+            <img class="tittle" src="img/Articles.png">
+        </div>
+    </div>
+
+
+    <div class="centect">
+        <div id="markdown-content"></div>
+        <span style="margin-left: 5px; float: left;">项目：</span>
+
+        <br>
+
+        <div class="item">
+            <a class="a" href="https://github.com/melonTMD/ArtCreator">📖 ArtCreator</a>
+            <span class="down_text">[HTML] [CSS] AGPL-3.0 license</span>
+        </div>
+
+        <div class="item">
+            <a class="a" href="https://github.com/melonTMD/I2NR">📖 I2NR</a>
+            <span class="down_text">[HTML] MIT license</span>
+        </div>
+
+    </div>
+    <script>
+        fetch('https://raw.githubusercontent.com/melonTMD/melonTMD/refs/heads/main/README.md')
+            .then(response => response.text())
+            .then(text => {
+                // 将 Markdown 内容转换为 HTML
+                const converter = new showdown.Converter();
+                const html = converter.makeHtml(text);
+
+                // 将转换后的 HTML 内容显示在页面上
+                document.getElementById('markdown-content').innerHTML = html;
+            })
+            .catch(error => console.error('加载文件时出错：', error));
+    </script>
+</body>
+</html>

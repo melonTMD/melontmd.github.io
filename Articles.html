@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到 melonTMD 的个人中心</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/159959432?v=4">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img style="float: left; height: 150px;" src="https://avatars.githubusercontent.com/u/159959432?v=4">
+
+        <div class="a_div">
+            <button class="fa" onclick="openLink('index.html')">主页</button>
+            <button class="a" onclick="openLink('News.html')" onmouseover="toggle_hide_or_block('news')"
+                onmouseout="toggle_hide_or_block('news')">新闻</button>
+            <button class="a" onclick="openLink('Blogs.html')" onmouseover="toggle_hide_or_block('blog')"
+                onmouseout="toggle_hide_or_block('blog')">博客</button>
+            <button class="a" onclick="openLink('Articles.html')" onmouseover="toggle_hide_or_block('article')"
+                onmouseout="toggle_hide_or_block('article')">文章</button>
+
+            <button class="tittle">文章</button>
+        </div>
+
+        <div class="list_a_div" id="news">
+            <img class="tittle" src="img/News.png">
+        </div>
+
+        <div class="list_a_div" id="blog">
+            <img class="tittle" src="img/Blogs.png">
+        </div>
+
+        <div class="list_a_div" id="article">
+            <img class="tittle" src="img/Articles.png">
+        </div>
+    </div>
+
+    <div class="centect">
+
+        <div class="item">
+            <a class="a" href="articles/Not-offensive-to-ask-questions[Disambiguation].html">📖 不令人反感提问</a>
+            <span class="down_text">[MKD] CC-BY-SA</span>
+        </div>
+
+    </div>
+</body>
+
+</html>
