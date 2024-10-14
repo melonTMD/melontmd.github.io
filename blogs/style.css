@@ -1,0 +1,11 @@
+.head {
+    text-align: center;
+}
+
+.page {
+    margin: auto;
+    width: 1000px;
+    padding: 20px;
+    background-color: #ffffffdd;
+    box-shadow: 0 0 4px #000000;
+}
