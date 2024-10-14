@@ -67,8 +67,10 @@
 
 .centect {
     position: absolute;
+    width: 90%;
     margin-top: 150px;
     margin-left: 0;
+    margin-right: 0;
 }
 
 .centect .item {
@@ -93,4 +95,24 @@
     margin-top: 39px;
     margin-left: 20px;
     color: #000;
+}
+
+
+.centect .collection {
+    border: 1px rgb(209,217,224) solid;
+    border-radius: 4px;
+    float: left;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    overflow-y: hidden;
+}
+
+.centect .collection .tittle {
+    background-color: #0b60e0;
+    margin: 0;
+    width: 100%;
+    color: #ffffff;
 }
